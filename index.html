@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toshi & Aditya | Engagement Invitation</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&family=Noto+Serif+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ivory: #f9f6f1;
+      --gold: #b59a5a;
+      --text: #2b2b2b;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--ivory);
+      color: var(--text);
+      text-align: center;
+    }
+
+    section {
+      padding: 48px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+      margin: 12px 0;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+    }
+
+    h2 {
+      font-size: 1.9rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin: 10px 0;
+    }
+
+    .gold { color: var(--gold); }
+
+    /* Hero Image – Portrait First */
+    .hero img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    /* Hindi Line */
+    .hindi-line {
+      font-family: 'Noto Serif Devanagari', serif;
+      font-size: 1.05rem;
+      color: var(--gold);
+      margin-top: 6px;
+    }
+
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: var(--gold);
+      margin: 28px auto;
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 14px 28px;
+      border-radius: 30px;
+      background: var(--gold);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer {
+      padding: 36px 20px;
+      font-size: 0.95rem;
+    }
+
+    /* Music Toggle */
+    .music-toggle {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="hero.jpg" alt="Toshi and Aditya" />
+    <p class="gold">With the blessings of our families</p>
+    <h1>Toshi <span class="gold">&</span> Aditya</h1>
+    <div class="hindi-line">एक नई शुरुआत, अपनों के साथ।</div>
+  </section>
+
+  <!-- INVITATION -->
+  <section>
+    <div class="divider"></div>
+    <p>
+      We joyfully invite you to celebrate our engagement and be a part of this
+      beautiful beginning.
+    </p>
+  </section>
+
+  <!-- EVENT DETAILS -->
+  <section>
+    <h2>Event Details</h2>
+    <div class="details">
+      <div class="card">
+        <strong>Date</strong>
+        <p>02 April 2026</p>
+      </div>
+      <div class="card">
+        <strong>Time</strong>
+        <p>10:00 AM</p>
+      </div>
+      <div class="card">
+        <strong>Venue</strong>
+        <p>
+          Mix Family Restaurant<br>
+          Kotdwara, Devi Road, Sitabpur
+        </p>
+        <a class="button" href="https://share.google/sFi9pmn2YVQLXTngl" target="_blank">
+          View on Map
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section>
+    <h2>RSVP</h2>
+    <p>Please confirm your presence via WhatsApp</p>
+    <a class="button" href="https://wa.me/919528684981" target="_blank">
+      RSVP on WhatsApp
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>With love,<br><strong>Our Families</strong></p>
+  </footer>
+
+  <!-- MUSIC -->
+  <audio id="bgm" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="music-toggle" onclick="toggleMusic()">🎵</div>
+
+  <script>
+    const music = document.getElementById('bgm');
+    let playing = true;
+
+    function toggleMusic() {
+      if (playing) {
+        music.pause();
+      } else {
+        music.play();
+      }
+      playing = !playing;
+    }
+  </script>
+
+</body>
+</html>
